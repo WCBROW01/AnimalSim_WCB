@@ -55,7 +55,7 @@ public class Location {
 	}
 
 	/**
-	 * @param x the x coordinate to set
+	 * @param x the x coordinate to set (must be positive)
 	 */
 	public void setxCoord(int x) {
 		try {
@@ -74,7 +74,7 @@ public class Location {
 	}
 
 	/**
-	 * @param y the y coordinate to set
+	 * @param y the y coordinate to set (must be positive)
 	 */
 	public void setyCoord(int y) {
 		try {
