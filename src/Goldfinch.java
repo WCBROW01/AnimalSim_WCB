@@ -27,15 +27,29 @@ public class Goldfinch extends Animal implements Walkable, Flyable {
 	}
 	
 	/**
-	 * Walk 1 unit in the specified direction.
+	 * Walk 1 unit in the specified direction. (Up: 1, Down: 1, Left: -2, Right: 2)
 	 */
+	@Override
 	public void walk(int direction) {
-		// TODO Auto-generated method stub
+		switch (direction) {
+		case -2:
+			location.setxCoord(location.getxCoord() - 1);
+			break;
+		case -1:
+			location.setxCoord(location.getyCoord() - 1);
+			break;
+		case 1:
+			location.setyCoord(location.getyCoord() + 1);
+			break;
+		case 2:
+			location.setxCoord(location.getxCoord() + 1);
+			break;
+		default:
+			throw new InvalidCoordinateException("Invalid direction");
+		}
 	}
 	
-	/**
-	 * Fly to the specified location.
-	 */
+	@Override
 	public void fly(Location l) {
 		location = l;
 	}

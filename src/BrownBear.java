@@ -26,14 +26,48 @@ public class BrownBear extends Animal implements Walkable, Swimmable {
 		setSubSpecies(subSpecies);
 	}
 	
+	/**
+	 * Walk 3 units in the specified direction. (Up: 1, Down: 1, Left: -2, Right: 2)
+	 */
 	public void walk(int direction) {
-		// TODO Auto-generated method stub
-		
+		switch (direction) {
+		case -2:
+			location.setxCoord(location.getxCoord() - 3);
+			break;
+		case -1:
+			location.setxCoord(location.getyCoord() - 3);
+			break;
+		case 1:
+			location.setyCoord(location.getyCoord() + 3);
+			break;
+		case 2:
+			location.setxCoord(location.getxCoord() + 3);
+			break;
+		default:
+			throw new InvalidCoordinateException("Invalid direction");
+		}
 	}
 
+	/**
+	 * Swim 2 units in the specified direction. (Up: 1, Down: 1, Left: -2, Right: 2)
+	 */
 	public void swim(int direction) {
-		// TODO Auto-generated method stub
-
+		switch (direction) {
+		case -2:
+			location.setxCoord(location.getxCoord() - 2);
+			break;
+		case -1:
+			location.setxCoord(location.getyCoord() - 2);
+			break;
+		case 1:
+			location.setyCoord(location.getyCoord() + 2);
+			break;
+		case 2:
+			location.setxCoord(location.getxCoord() + 2);
+			break;
+		default:
+			throw new InvalidCoordinateException("Invalid direction");
+		}
 	}
 
 	/**
