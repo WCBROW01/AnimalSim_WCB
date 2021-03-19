@@ -29,6 +29,7 @@ public class Goldfinch extends Animal implements Walkable, Flyable {
 	/**
 	 * Walk 1 unit in the specified direction. (Up: 1, Down: 1, Left: -2, Right: 2)
 	 */
+	@Override
 	public void walk(int direction) {
 		switch (direction) {
 		case -2:
@@ -48,6 +49,7 @@ public class Goldfinch extends Animal implements Walkable, Flyable {
 		}
 	}
 	
+	@Override
 	public void fly(Location l) {
 		location = l;
 	}

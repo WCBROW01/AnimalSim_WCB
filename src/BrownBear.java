@@ -29,6 +29,7 @@ public class BrownBear extends Animal implements Walkable, Swimmable {
 	/**
 	 * Walk 3 units in the specified direction. (Up: 1, Down: 1, Left: -2, Right: 2)
 	 */
+	@Override
 	public void walk(int direction) {
 		switch (direction) {
 		case -2:
@@ -51,6 +52,7 @@ public class BrownBear extends Animal implements Walkable, Swimmable {
 	/**
 	 * Swim 2 units in the specified direction. (Up: 1, Down: 1, Left: -2, Right: 2)
 	 */
+	@Override
 	public void swim(int direction) {
 		switch (direction) {
 		case -2:
