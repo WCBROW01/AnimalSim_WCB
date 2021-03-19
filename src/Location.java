@@ -58,12 +58,8 @@ public class Location {
 	 * @param x the x coordinate to set (must be positive)
 	 */
 	public void setxCoord(int x) {
-		try {
-			if (x < 0) throw new InvalidCoordinateException("Invalid x coordinate");
-			else xCoord = x;
-		} catch (InvalidCoordinateException e) {
-			System.out.println(e.getMessage());
-		}
+		if (x < 0) throw new InvalidCoordinateException("Invalid x coordinate");
+		else xCoord = x;
 	}
 
 	/**
@@ -77,12 +73,8 @@ public class Location {
 	 * @param y the y coordinate to set (must be positive)
 	 */
 	public void setyCoord(int y) {
-		try {
-			if (y < 0) throw new InvalidCoordinateException("Invalid y coordinate");
-			else yCoord = y;
-		} catch (InvalidCoordinateException e) {
-			System.out.println(e.getMessage());
-		}
+		if (y < 0) throw new InvalidCoordinateException("Invalid y coordinate");
+		else yCoord = y;
 	}
 	
 }

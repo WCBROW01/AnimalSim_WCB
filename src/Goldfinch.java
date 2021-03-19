@@ -65,12 +65,8 @@ public class Goldfinch extends Animal implements Walkable, Flyable {
 	 * @param ws the wingspan to set (must be between 5.0 and 11.0, inclusive)
 	 */
 	public void setWingSpan(double ws) {
-		try {
 		if (ws < 5.0 || ws > 11.0) throw new InvalidWingspanException("Invalid wingspan");
 		else wingSpan = ws;
-		} catch (InvalidWingspanException e) {
-			System.out.println(e.getMessage());
-		}
 	}
 
 }

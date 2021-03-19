@@ -62,12 +62,8 @@ public abstract class Animal {
 	 * @param simID the simID to set
 	 */
 	public void setSimID(int simID) {
-		try {
-			if (simID < 1) throw new InvalidSimIDException("Invalid Sim ID");
-			else this.simID = simID;
-		} catch (InvalidSimIDException e) {
-			System.out.println(e.getMessage());
-		}
+		if (simID < 1) throw new InvalidSimIDException("Invalid Sim ID");
+		else this.simID = simID;
 	}
 	
 	/**

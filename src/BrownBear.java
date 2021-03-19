@@ -83,31 +83,27 @@ public class BrownBear extends Animal implements Walkable, Swimmable {
 	 * @param subSpecies the sub-species to set
 	 */
 	public void setSubSpecies(String subSpecies) {
-		try {
-			switch (subSpecies) {
-			case "Alaskan":
-				this.subSpecies = "Alaskan";
-				break;
-			case "Asiatic":
-				this.subSpecies = "Asiatic";
-				break;
-			case "European":
-				this.subSpecies = "European";
-				break;
-			case "Grizzly":
-				this.subSpecies = "Grizzly";
-				break;
-			case "Kodiak":
-				this.subSpecies = "Kodiak";
-				break;
-			case "Siberian":
-				this.subSpecies = "Siberian";
-				break;
-			default:
-				throw new InvalidSubspeciesException("Invalid subspecies");
-			}
-		} catch (InvalidSubspeciesException e) {
-			System.out.println(e.getMessage());
+		switch (subSpecies) {
+		case "Alaskan":
+			this.subSpecies = "Alaskan";
+			break;
+		case "Asiatic":
+			this.subSpecies = "Asiatic";
+			break;
+		case "European":
+			this.subSpecies = "European";
+			break;
+		case "Grizzly":
+			this.subSpecies = "Grizzly";
+			break;
+		case "Kodiak":
+			this.subSpecies = "Kodiak";
+			break;
+		case "Siberian":
+			this.subSpecies = "Siberian";
+			break;
+		default:
+			throw new InvalidSubspeciesException("Invalid subspecies");
 		}
 	}
 
