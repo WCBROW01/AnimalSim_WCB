@@ -83,18 +83,19 @@ public class Application {
 			System.out.println("getCoordinates test failed");
 		}
 		
-		// Test InvalidCoordinateException
+		// Test InvalidCoordinateException for x coordinate
 		try {
-			location.setxCoord(-1);
+			location.setxCoord(-1); // Intentionally set bad value
 			System.out.println("InvalidCoordinateException test failed for x coordinate");
 		} catch (InvalidCoordinateException e) {
-			if (e.getMessage().equals("Invalid x coordinate")) {
+			if (e.getMessage().equals("Invalid x coordinate")) { // Check whether the exception was thrown for the correct reason
 				System.out.println("InvalidCoordinateException test passed for x coordinate");
 			} else {
 				System.out.println("InvalidCoordinateException test failed for x coordinate");
 			}
 		}
 		
+		// Test InvalidCoordinateException for y coordinate
 		try {
 			location.setyCoord(-1);
 			System.out.println("InvalidCoordinateException test failed for y coordinate");
@@ -295,15 +296,27 @@ public class Application {
 			System.out.println("fly test failed");
 		}
 		
-		// Test InvalidWingspanException
+		// Test InvalidWingspanException for low value
 		try {
 			goldfinch.setWingSpan(4.7);
-			System.out.println("InvalidWingspanException test failed");
+			System.out.println("InvalidWingspanException test failed for low value");
 		} catch (InvalidWingspanException e) {
 			if (e.getMessage().equals("Invalid wingspan")) {
-				System.out.println("InvalidWingspanException test passed");
+				System.out.println("InvalidWingspanException test passed for low value");
 			} else {
-				System.out.println("InvalidWingspanException test failed");
+				System.out.println("InvalidWingspanException test failed for low value");
+			}
+		}
+		
+		// Test InvalidWingspanException for high value
+		try {
+			goldfinch.setWingSpan(12.0);
+			System.out.println("InvalidWingspanException test failed for high value");
+		} catch (InvalidWingspanException e) {
+			if (e.getMessage().equals("Invalid wingspan")) {
+				System.out.println("InvalidWingspanException test passed for high value");
+			} else {
+				System.out.println("InvalidWingspanException test failed for high value");
 			}
 		}
 	}
