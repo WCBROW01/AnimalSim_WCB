@@ -36,7 +36,7 @@ public class BrownBear extends Animal implements Walkable, Swimmable {
 			location.setxCoord(location.getxCoord() - 3);
 			break;
 		case -1:
-			location.setxCoord(location.getyCoord() - 3);
+			location.setyCoord(location.getyCoord() - 3);
 			break;
 		case 1:
 			location.setyCoord(location.getyCoord() + 3);
@@ -59,7 +59,7 @@ public class BrownBear extends Animal implements Walkable, Swimmable {
 			location.setxCoord(location.getxCoord() - 2);
 			break;
 		case -1:
-			location.setxCoord(location.getyCoord() - 2);
+			location.setyCoord(location.getyCoord() - 2);
 			break;
 		case 1:
 			location.setyCoord(location.getyCoord() + 2);

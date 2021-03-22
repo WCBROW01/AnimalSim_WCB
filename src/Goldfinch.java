@@ -36,7 +36,7 @@ public class Goldfinch extends Animal implements Walkable, Flyable {
 			location.setxCoord(location.getxCoord() - 1);
 			break;
 		case -1:
-			location.setxCoord(location.getyCoord() - 1);
+			location.setyCoord(location.getyCoord() - 1);
 			break;
 		case 1:
 			location.setyCoord(location.getyCoord() + 1);
