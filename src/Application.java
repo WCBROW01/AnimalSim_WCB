@@ -7,6 +7,7 @@
 public class Application {
 
 	/**
+	 * Execute all the tests and print a new line once each one is finished
 	 * @param args
 	 */
 	public static void main(String[] args) {
@@ -19,6 +20,9 @@ public class Application {
 		brownBearTests();
 	}
 	
+	/**
+	 * Tests for Location class
+	 */
 	private static void locationTests() {
 		System.out.println("*********************************************\n"
 				+ "\t\tLocation Tests\n"
@@ -108,10 +112,16 @@ public class Application {
 		}
 	}
 	
+	/**
+	 * Tests for Animal class
+	 */
 	private static void animalTests() {
 		System.out.println("*********************************************\n"
 				+ "\t\tAnimal Tests\n"
 				+ "*********************************************");
+		
+		// Uncomment the line below to see the program crash from instantiating Animal
+		//Animal animal = new Animal();
 		
 		/*
 		 * The Animal tests will be run from Goldfinch since it inherits Animal.
@@ -197,6 +207,9 @@ public class Application {
 		}
 	}
 	
+	/**
+	 * Tests for Goldfinch class
+	 */
 	private static void goldfinchTests() {
 		System.out.println("*********************************************\n"
 				+ "\t\tGoldfinch Tests\n"
@@ -321,6 +334,9 @@ public class Application {
 		}
 	}
 	
+	/**
+	 * Tests for BrownBear class
+	 */
 	private static void brownBearTests() {
 		System.out.println("*********************************************\n"
 				+ "\t\tBrownBear Tests\n"
