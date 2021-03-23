@@ -365,8 +365,8 @@ public class Application {
 		
 		// Test getters/setters
 		try {
-			String[] subSpeciesTypes = { "Alaskan", "Asiatic", "European", "Grizzly", "Kodiak", "Siberian" };
-			boolean subSpeciesTestPassed = true;
+			String[] subSpeciesTypes = { "Alaskan", "Asiatic", "European", "Grizzly", "Kodiak", "Siberian" }; // Valid subSpecies values
+			boolean subSpeciesTestPassed = true; // This will be false if any value fails
 			
 			for (String subSpecies : subSpeciesTypes) {
 				brownBear.setSubSpecies(subSpecies);
