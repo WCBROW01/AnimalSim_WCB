@@ -349,8 +349,17 @@ public class Application {
 		
 		// Test getters/setters
 		try {
-			brownBear.setSubSpecies("European");
-			if (brownBear.getSubSpecies().equals("European")) {
+			String[] subSpeciesTypes = { "Alaskan", "Asiatic", "European", "Grizzly", "Kodiak", "Siberian" };
+			boolean subSpeciesTestPassed = true;
+			
+			for (String subSpecies : subSpeciesTypes) {
+				brownBear.setSubSpecies(subSpecies);
+				if (!brownBear.getSubSpecies().equals(subSpecies)) {
+					subSpeciesTestPassed = false;
+				}
+			}
+			
+			if (subSpeciesTestPassed) {
 				System.out.println("subSpecies getter/setter test passed");
 			} else {
 				System.out.println("subSpecies getter/setter test failed");
